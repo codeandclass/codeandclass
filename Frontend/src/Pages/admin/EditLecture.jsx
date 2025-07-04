@@ -4,7 +4,7 @@ const EditLecture = () => {
   const [units, setUnits] = useState([]);
   const [selectedUnit, setSelectedUnit] = useState(null);
 
-  const API_BASE = '/api/lectures';
+  const API_BASE = 'https://codeandclass.onrender.com/api/lectures';
 
   useEffect(() => {
     fetchLectures();

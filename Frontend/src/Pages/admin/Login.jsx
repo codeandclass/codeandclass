@@ -13,7 +13,7 @@ const Login = () => {
     }
 
     try {
-      const response = await fetch('/api/users/login', {
+      const response = await fetch('https://codeandclass.onrender.com/api/users/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

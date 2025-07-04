@@ -22,7 +22,7 @@ const AddCertificate = () => {
         };
 
         try {
-            const res = await fetch('/api/certificates/', {
+            const res = await fetch('https://codeandclass.onrender.com/api/certificates/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

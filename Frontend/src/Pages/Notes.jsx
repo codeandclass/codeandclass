@@ -11,7 +11,7 @@ const Notes = () => {
 
     const fetchNotes = async () => {
         try {
-            const rawNotes = await fetch('/api/notes')
+            const rawNotes = await fetch('https://codeandclass.onrender.com/api/notes')
             const notesData = await rawNotes.json()
             setNotes(notesData)
         } catch (err) {

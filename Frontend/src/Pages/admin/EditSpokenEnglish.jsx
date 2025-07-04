@@ -4,7 +4,7 @@ const EditSpokenEnglish = () => {
   const [units, setUnits] = useState([]);
   const [selectedUnit, setSelectedUnit] = useState(null);
 
-  const API_BASE = '/api/spoken-lectures';
+  const API_BASE = 'https://codeandclass.onrender.com/api/spoken-lectures';
 
   useEffect(() => {
     const fetchUnits = async () => {

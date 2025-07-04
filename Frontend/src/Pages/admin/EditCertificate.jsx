@@ -15,7 +15,7 @@ const CertificateManager = () => {
         fetchCertificates()
     }, []);
 
-    const API_BASE = '/api/certificates'
+    const API_BASE = 'https://codeandclass.onrender.com/api/certificates'
 
     const fetchCertificates = async () => {
         try {

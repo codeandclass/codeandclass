@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const API_BASE = '/api/users';
+const API_BASE = 'https://codeandclass.onrender.com/api/users';
 
 const EditUser = () => {
   const [users, setUsers] = useState([]);

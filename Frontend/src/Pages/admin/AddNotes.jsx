@@ -10,7 +10,7 @@ const AddNotes = () => {
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState('');
 
-    const API_BASE = '/api/notes';
+    const API_BASE = 'https://codeandclass.onrender.com/api/notes';
 
     const handleChange = (e) => {
         const { name, value } = e.target;

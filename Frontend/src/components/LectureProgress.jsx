@@ -6,7 +6,7 @@ const LectureProgress = () => {
 
   const [units, setUnits] = useState([])
 
-  const API_BASE = '/api/lectures'
+  const API_BASE = 'https://codeandclass.onrender.com/api/lectures'
 
   useEffect(() => {
     fetchUnits()

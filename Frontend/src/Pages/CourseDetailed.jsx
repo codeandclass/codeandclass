@@ -7,7 +7,7 @@ const CourseDetailed = () => {
   const [course, setCourse] = useState([]);
   const [error, setError] = useState('');
 
-  const API_BASE = 'http://localhost:8080/api/courses'
+  const API_BASE = 'https://codeandclass.onrender.com/api/courses'
 
   const fetchCourse = async () => {
     try {

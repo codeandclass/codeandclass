@@ -8,7 +8,7 @@ const CertificateVerification = () => {
   const [error, setError] = useState('');
   const [hasSearched, setHasSearched] = useState(false);
 
-  const API_BASE = '/api/certificates'
+  const API_BASE = 'https://codeandclass.onrender.com/api/certificates'
 
   const handleSearchCertificate = async () => {
     try {

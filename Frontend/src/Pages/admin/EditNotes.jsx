@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const API_BASE = '/api/notes'; // Update if needed
+const API_BASE = 'https://codeandclass.onrender.com/api/notes'; // Update if needed
 
 const EditNotes = () => {
   const [notes, setNotes] = useState([]);

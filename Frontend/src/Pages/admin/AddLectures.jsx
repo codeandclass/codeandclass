@@ -24,7 +24,7 @@ const AddLectures = () => {
 
         try {
             const token = localStorage.getItem('token'); // if route is protected
-            const response = await fetch('/api/lectures', {
+            const response = await fetch('https://codeandclass.onrender.com/api/lectures', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

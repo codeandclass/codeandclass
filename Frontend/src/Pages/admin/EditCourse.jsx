@@ -4,7 +4,7 @@ import EditCourse from './EditCourse'; // assuming the EditCourse component you 
 const CourseManager = () => {
     const [courses, setCourses] = useState([]);
 
-    const API_BASE = '/api/courses';
+    const API_BASE = 'https://codeandclass.onrender.com/api/courses';
 
     useEffect(() => {
         handleFetchCourses()

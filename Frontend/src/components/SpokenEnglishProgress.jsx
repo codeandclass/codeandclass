@@ -6,7 +6,7 @@ const SpokenEnglishProgress = () => {
 
   const [units, setUnits] = useState([])
 
-  const API_BASE = '/api/spoken-lectures'
+  const API_BASE = 'https://codeandclass.onrender.com/api/spoken-lectures'
 
   useEffect(() => {
     fetchUnits()
