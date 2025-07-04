@@ -306,6 +306,7 @@ const Navbar = () => {
                         to={'/notes'}
                         className={`text-sm font-bold px-2 py-2 rounded-md hover:bg-[#3f3f45] transition-all ${isActive('/notes')}`}
                         onMouseEnter={() => {
+                            setIsOpen(false);
                             setIsSpokenEnglishOpen(false)
                             setIsClassesOpen(false)
                         }}
