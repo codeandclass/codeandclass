@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "buildCommand": "cd frontend && npm install && npm run build && cd ../backend && npm install",
+    "buildCommand": "npm install && npm install --prefix Frontend && npm run build --prefix Frontend",
     "installCommand": "echo Skipping root install...",
     "builds": [
         {
