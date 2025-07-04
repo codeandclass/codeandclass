@@ -1,21 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "http://codeandclass.in/:path*",
-      "destination": "https://www.codeandclass.in/:path*",
-      "permanent": true
-    },
-    {
-      "source": "http://www.codeandclass.in/:path*",
-      "destination": "https://www.codeandclass.in/:path*",
-      "permanent": true
-    },
-    {
-      "source": "https://codeandclass.in/:path*",
-      "destination": "https://www.codeandclass.in/:path*",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     {
       "source": "/:path*",
