@@ -9,10 +9,8 @@ import spokenLectureRoutes from './routes/spokenLectureRoute.js';
 import courseRoutes from './routes/courseRoutes.js';
 import certificateRoutes from './routes/certificateRoutes.js';
 import notesRoute from './routes/notesRoute.js';
-import path from 'path'
 
 const app = express();
-const DIRNAME = path.resolve()
 
 
 app.use(cors());
@@ -32,11 +30,6 @@ app.use('/api/notes', notesRoute);
 app.use(errorHandler);
 
 const port = process.env.PORT || 8000
-
-app.use(express.static(path.join(DIRNAME, '/Frontend/dist')))
-app.use('*', (_, res) => {
-    res.sendFile(path.resolve(DIRNAME, 'Frontend', 'dist', 'index.html'))
-})
 
 
 // Connect DB and Start server
