@@ -20,7 +20,7 @@ const AboutInstructor = () => {
                         Meet Your Instructor
                     </h2>
                     <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
-                        Hello! I'm <span className="text-white font-semibold">Syed Asif Khan</span>, a dedicated Spoken English trainer and an exceptional educator for Class 10 and Intermediate students. I specialize in helping learners build confidence in communication and excel in academics.
+                        Hello! I'm <span className="text-white font-semibold">Mohammed Asif Khan</span>, a dedicated Spoken English trainer and an exceptional educator for Class 10 and Intermediate students. I specialize in helping learners build confidence in communication and excel in academics.
                     </p>
                     <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
                         With years of experience in teaching and mentoring, I’ve guided countless students toward academic success and personal growth. My classes are engaging, practical, and results-driven.
