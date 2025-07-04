@@ -28,6 +28,7 @@ import Notes from './Pages/Notes';
 import AboutInstructor from './Pages/AboutInstructor';
 import EditNotes from './Pages/admin/EditNotes';
 import AddNotes from './Pages/admin/AddNotes';
+import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
       <Navbar />
 
       <div>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
 
