@@ -9,12 +9,12 @@ import spokenLectureRoutes from './routes/spokenLectureRoute.js';
 import courseRoutes from './routes/courseRoutes.js';
 import certificateRoutes from './routes/certificateRoutes.js';
 import notesRoute from './routes/notesRoute.js';
+import { createServerlessHandler } from './vercelHandler.js'; // Make sure this file exists
 
-const app = express();
-
-app.use(cors());
 dotenv.config();
 
+const app = express();
+app.use(cors());
 app.use(express.json());
 
 // Routes
@@ -28,11 +28,17 @@ app.use('/api/notes', notesRoute);
 // Error Handling
 app.use(errorHandler);
 
-const port = process.env.PORT || 8000
+// MongoDB connection (only once)
+let isConnected = false;
+const connectToDB = async () => {
+  if (!isConnected) {
+    await mongoose.connect(process.env.MONGO_URI);
+    isConnected = true;
+  }
+};
 
-// Connect DB and Start server
-mongoose.connect(process.env.MONGO_URI).then(() => {
-    app.listen(port, () => console.log(`Server running on port ${port}`));
-}).catch((err) => {
-    console.error(err);
-});
+// Export the Vercel handler
+export default async function handler(req, res) {
+  await connectToDB();
+  return createServerlessHandler(app)(req, res);
+}
