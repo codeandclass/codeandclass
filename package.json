@@ -1,0 +1,15 @@
+{
+    "name": "my-monorepo-app",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "install": "echo 'Use cd frontend or cd backend to install dependencies'",
+        "start:frontend": "cd frontend && npm start",
+        "start:backend": "cd backend && npm start",
+        "build:frontend": "cd frontend && npm run build",
+        "dev": "concurrently \"cd backend && npm start\" \"cd frontend && npm start\""
+    },
+    "devDependencies": {
+        "concurrently": "^8.0.1"
+    }
+}
