@@ -6,7 +6,7 @@ const LectureProgress = () => {
 
   const [units, setUnits] = useState([])
 
-  const API_BASE = 'http://localhost:8000/api/lectures'
+  const API_BASE = '/api/lectures'
 
   useEffect(() => {
     fetchUnits()

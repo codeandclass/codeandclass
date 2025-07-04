@@ -4,7 +4,7 @@ const EditLecture = () => {
   const [units, setUnits] = useState([]);
   const [selectedUnit, setSelectedUnit] = useState(null);
 
-  const API_BASE = 'http://localhost:8000/api/lectures';
+  const API_BASE = '/api/lectures';
 
   useEffect(() => {
     fetchLectures();

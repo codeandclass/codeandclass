@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const API_BASE = 'http://localhost:8000/api/notes'; // Update if needed
+const API_BASE = '/api/notes'; // Update if needed
 
 const EditNotes = () => {
   const [notes, setNotes] = useState([]);

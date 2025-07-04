@@ -24,7 +24,7 @@ const AddSpokenEnglishLecture = () => {
   
     try {
       const token = localStorage.getItem('token'); // If protected route
-      const response = await fetch('http://localhost:8000/api/spoken-lectures', {
+      const response = await fetch('/api/spoken-lectures', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

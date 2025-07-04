@@ -22,7 +22,7 @@ const AddCertificate = () => {
         };
 
         try {
-            const res = await fetch('http://localhost:8000/api/certificates/', {
+            const res = await fetch('/api/certificates/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

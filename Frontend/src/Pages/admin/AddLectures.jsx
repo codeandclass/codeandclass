@@ -24,7 +24,7 @@ const AddLectures = () => {
 
         try {
             const token = localStorage.getItem('token'); // if route is protected
-            const response = await fetch('http://localhost:8000/api/lectures', {
+            const response = await fetch('/api/lectures', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

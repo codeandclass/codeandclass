@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const API_BASE = 'http://localhost:8000/api/users';
+const API_BASE = '/api/users';
 
 const EditUser = () => {
   const [users, setUsers] = useState([]);

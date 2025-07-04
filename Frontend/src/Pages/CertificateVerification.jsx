@@ -8,7 +8,7 @@ const CertificateVerification = () => {
   const [error, setError] = useState('');
   const [hasSearched, setHasSearched] = useState(false);
 
-  const API_BASE = 'http://localhost:8000/api/certificates'
+  const API_BASE = '/api/certificates'
 
   const handleSearchCertificate = async () => {
     try {

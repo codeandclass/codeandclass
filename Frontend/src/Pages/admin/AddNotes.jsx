@@ -10,7 +10,7 @@ const AddNotes = () => {
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState('');
 
-    const API_BASE = 'http://localhost:8000/api/notes';
+    const API_BASE = '/api/notes';
 
     const handleChange = (e) => {
         const { name, value } = e.target;

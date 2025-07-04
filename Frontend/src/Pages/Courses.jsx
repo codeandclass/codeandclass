@@ -5,7 +5,7 @@ const Courses = () => {
   
   const [courses, setCourses] = useState([])
 
-  const API_BASE = 'http://localhost:8000/api/courses';
+  const API_BASE = '/api/courses';
 
   useEffect(() => {
     handleFetchCourses()

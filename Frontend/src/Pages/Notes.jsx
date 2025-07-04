@@ -11,7 +11,7 @@ const Notes = () => {
 
     const fetchNotes = async () => {
         try {
-            const rawNotes = await fetch('http://localhost:8000/api/notes')
+            const rawNotes = await fetch('/api/notes')
             const notesData = await rawNotes.json()
             setNotes(notesData)
         } catch (err) {

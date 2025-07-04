@@ -46,7 +46,7 @@ const AddCourse = () => {
 
         try {
             const token = localStorage.getItem('token'); // optional if protected route
-            const res = await fetch('http://localhost:8000/api/courses', {
+            const res = await fetch('/api/courses', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
