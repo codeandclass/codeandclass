@@ -10,7 +10,7 @@ const Gallery = () => {
             .then(res => res.json())
             .then(data => setImages(data))
             .catch(err => console.error('Error fetching gallery:', err));
-    }, []);
+    }, [images]);
 
     return (
         <div className="min-h-screen relative bg-black text-white px-4 py-24 md:px-10 lg:px-20 top-10">
