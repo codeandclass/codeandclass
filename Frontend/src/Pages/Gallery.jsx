@@ -29,7 +29,7 @@ const Gallery = () => {
                             className="overflow-hidden rounded-xl border border-zinc-700 shadow-md hover:shadow-cyan-500/20 transition-all"
                         >
                             <img
-                                src={src || 'https://c4.wallpaperflare.com/wallpaper/891/268/37/beautiful-nature-high-resolution-1920x1200-wallpaper-thumb.jpg'}
+                                src={src.imageUrl}
                                 alt={`Gallery ${index + 1}`}
                                 className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
                                 loading="lazy"
