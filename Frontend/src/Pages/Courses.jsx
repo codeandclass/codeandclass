@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import CourseCard from '../components/CourseCard';
+import { Fade } from 'react-awesome-reveal';
 
 const Courses = () => {
-  
+
   const [courses, setCourses] = useState([])
 
   const API_BASE = 'https://codeandclass.onrender.com/api/courses';
@@ -36,15 +37,17 @@ const Courses = () => {
 
       {/* Grid of Course Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {courses.map((course, index) => (
-          <CourseCard
-            key={index}
-            title={course.title}
-            description={course.description}
-            link={course._id}
-            imageUrl={course.thumbnail}
-          />
-        ))}
+        <Fade direction="up">
+          {courses.map((course, index) => (
+            <CourseCard
+              key={index}
+              title={course.title}
+              description={course.description}
+              link={course._id}
+              imageUrl={course.thumbnail}
+            />
+          ))}
+        </Fade>
       </div>
     </div>
   );

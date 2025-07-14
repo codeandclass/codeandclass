@@ -48,7 +48,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Desktop Nav */}
-                <div className={`hidden md:flex ${token ? 'md:w-[340vw]' : 'md:w-[160vw]'} flex-row space-x-8 items-center antialiased border px-4 py-2 rounded-2xl border-zinc-700/60 bg-zinc-800 top-0 z-50`}>
+                <div className={`hidden md:flex ${token ? 'md:w-[560vw]' : 'md:w-[240vw]'} flex-row space-x-8 items-center antialiased border px-4 py-2 rounded-2xl border-zinc-700/60 bg-zinc-800 top-0 z-50`}>
                     {token && <Link onMouseEnter={() => {
                         setIsClassesOpen(false)
                         setIsSpokenEnglishOpen(false)
@@ -166,6 +166,17 @@ const Navbar = () => {
                         }}
                     >
                         Certificate Verification
+                    </Link>
+
+                    <Link
+                        onMouseEnter={() => {
+                            setIsSpokenEnglishOpen(false)
+                            setIsClassesOpen(false)
+                        }}
+                        to={'/gallery'}
+                        className={`text-sm font-bold px-2 py-2 rounded-md hover:bg-[#3f3f45] transition-all ${isActive('/gallery')}`}
+                    >
+                        Gallery
                     </Link>
 
                     {/* Contact Link */}
@@ -324,6 +335,18 @@ const Navbar = () => {
                         }}
                     >
                         Certificate Verification
+                    </Link>
+
+                    <Link
+                        to={'/gallery'}
+                        className={`text-sm font-semibold text-white hover:underline ${isActive('/gallery')}`}
+                        onClick={() => {
+                            setIsOpen(false);
+                            setIsClassesOpen(false);
+                            setIsSpokenEnglishOpen(false);
+                        }}
+                    >
+                        Gallery
                     </Link>
 
                     <Link

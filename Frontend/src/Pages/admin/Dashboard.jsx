@@ -29,6 +29,10 @@ const Dashboard = () => {
             link: "/dashboard/add-notes",
         },
         {
+            title: "Add or Edit Gallery",
+            link: "/dashboard/edit-gallery",
+        },
+        {
             title: "Edit Lecture of Classes",
             link: "/dashboard/edit-lecture",
         },
@@ -66,7 +70,7 @@ const Dashboard = () => {
                     <span className="text-xl font-bold text-center mb-10 bg-gradient-to-r from-cyan-400 to-blue-600 text-transparent bg-clip-text">Hi, from Code & Class</span>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 h-[30rem]">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 h-[40rem]">
                     {items.map((item, index) => (
                         <Link key={index} to={item.link}>
                             <div className="bg-zinc-900 border border-zinc-700 rounded-xl p-6 hover:shadow-xl hover:shadow-cyan-500/30 transition-all h-full flex items-center justify-center text-center">

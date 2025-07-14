@@ -29,6 +29,8 @@ import AboutInstructor from './Pages/AboutInstructor';
 import EditNotes from './Pages/admin/EditNotes';
 import AddNotes from './Pages/admin/AddNotes';
 import ScrollToTop from './components/ScrollToTop';
+import Gallery from './Pages/Gallery';
+import AddEditGallery from './Pages/admin/AddEditGallery';
 
 const App = () => {
   return (
@@ -47,6 +49,8 @@ const App = () => {
           <Route path="/certificate-verification" element={<CertificateVerification />} />
 
           <Route path="/contact" element={<Contact />} />
+
+          <Route path="/gallery" element={<Gallery />} />
 
           <Route path="/classes/:classId" element={<LectureProgress />} />
 
@@ -128,6 +132,15 @@ const App = () => {
             element={
               <PrivateRoute>
                 <EditCourse />
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/dashboard/edit-gallery"
+            element={
+              <PrivateRoute>
+                <AddEditGallery />
               </PrivateRoute>
             }
           />
