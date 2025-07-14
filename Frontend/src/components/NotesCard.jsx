@@ -7,7 +7,7 @@ const NotesCard = ({ image, title, driveLink }) => {
             <img
                 src={image}
                 alt={title}
-                className="w-full h-48 object-cover border-b border-zinc-700"
+                className="w-full h-48 object-fill border-b border-zinc-700"
             />
 
             <div className="p-4 flex flex-col items-center justify-between gap-4">
