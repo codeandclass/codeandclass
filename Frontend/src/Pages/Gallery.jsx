@@ -22,7 +22,7 @@ const Gallery = () => {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <Zoom cascade damping={0.1}>
+                <Zoom cascade damping={0.1} triggerOnce>
                     {images.map((src, index) => (
                         <div
                             key={index}
