@@ -51,6 +51,11 @@ const CertificateVerification = () => {
           type="text"
           value={certNumber}
           onChange={(e) => setCertNumber(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              handleSearchCertificate();
+            }
+          }}
           placeholder="Enter Certificate Number"
           className="w-full md:w-[300px] px-4 py-2 rounded-md border border-white bg-zinc-950"
         />
@@ -91,10 +96,10 @@ const CertificateVerification = () => {
               <span className="font-semibold text-white">Status:</span>
               <span
                 className={`font-bold ${certDetails?.status === 'Verified'
-                    ? 'text-green-400'
-                    : certDetails?.status === 'Pending'
-                      ? 'text-yellow-400'
-                      : 'text-red-400'
+                  ? 'text-green-400'
+                  : certDetails?.status === 'Pending'
+                    ? 'text-yellow-400'
+                    : 'text-red-400'
                   }`}
               >
                 {certDetails?.status}

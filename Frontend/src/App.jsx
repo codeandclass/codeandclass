@@ -31,6 +31,8 @@ import AddNotes from './Pages/admin/AddNotes';
 import ScrollToTop from './components/ScrollToTop';
 import Gallery from './Pages/Gallery';
 import AddEditGallery from './Pages/admin/AddEditGallery';
+import PartnerNGO from './Pages/PartnerNGO';
+import NgoDetails from './Pages/admin/NgoDetails';
 
 const App = () => {
   return (
@@ -59,6 +61,8 @@ const App = () => {
           <Route path="/notes" element={<Notes />} />
 
           <Route path="/about" element={<AboutInstructor />} />
+
+          <Route path="/ngos" element={<PartnerNGO />} />
 
           <Route path="/login" element={<Login />} />
 
@@ -186,6 +190,15 @@ const App = () => {
             element={
               <PrivateRoute>
                 <EditNotes />
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/dashboard/ngo-details"
+            element={
+              <PrivateRoute>
+                <NgoDetails />
               </PrivateRoute>
             }
           />

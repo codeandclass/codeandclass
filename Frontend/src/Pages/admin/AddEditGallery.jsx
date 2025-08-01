@@ -76,7 +76,7 @@ const AddEditGallery = () => {
                         placeholder="Enter image URL"
                         value={newImageUrl}
                         onChange={(e) => setNewImageUrl(e.target.value)}
-                        className="w-full px-3 py-2 rounded-md text-white"
+                        className="w-full px-3 py-2 rounded-md text-white border border-white"
                     />
                     <button
                         onClick={handleAddImage}
@@ -103,7 +103,7 @@ const AddEditGallery = () => {
                                     value={editUrl}
                                     onChange={(e) => setEditUrl(e.target.value)}
                                     placeholder="Update Image URL"
-                                    className="w-full px-3 py-2 rounded-md text-white"
+                                    className="w-full px-3 py-2 rounded-md text-white border border-white"
                                 />
                                 <button
                                     onClick={handleEditSave}

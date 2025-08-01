@@ -159,7 +159,7 @@ const Contact = () => {
         <div className="overflow-hidden rounded-xl shadow-lg border border-zinc-700 animate-fade-in">
           <iframe
             title="Google Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.137683195236!2d78.47967017542527!3d17.357106603676325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb990052efe165%3A0x9f615e09445de5be!2sAl%20Madina%20Computer%20Institute!5e0!3m2!1sen!2sin!4v1751399445058!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.137562705453!2d78.4796710754253!3d17.357112403676034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9991afbe2483%3A0x66f496aa418886da!2sCode%20and%20class%20educational%20institute!5e0!3m2!1sen!2sin!4v1754031275248!5m2!1sen!2sin"
             width="100%"
             height="100%"
             className="w-full h-[350px] md:h-[65vh]"

@@ -33,6 +33,10 @@ const Dashboard = () => {
             link: "/dashboard/edit-gallery",
         },
         {
+            title: "Add or Edit Ngo's",
+            link: "/dashboard/ngo-details",
+        },
+        {
             title: "Edit Lecture of Classes",
             link: "/dashboard/edit-lecture",
         },
