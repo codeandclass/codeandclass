@@ -8,7 +8,7 @@ const PartnerNGO = () => {
     useEffect(() => {
         const fetchNgos = async () => {
             try {
-                const response = await fetch('http://localhost:8080/api/ngos/ngos/');
+                const response = await fetch('https://codeandclass.onrender.com/api/ngos/ngos/');
                 const data = await response.json();
                 setNgos(data);
             } catch (error) {

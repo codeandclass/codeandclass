@@ -12,7 +12,7 @@ const NgoDetails = () => {
         image: ''
     });
 
-    const API_URL = 'http://localhost:8080/api/ngos';
+    const API_URL = 'https://codeandclass.onrender.com/api/ngos';
 
     // Fetch all NGOs
     const getAllNgos = async () => {
