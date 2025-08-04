@@ -29,6 +29,22 @@ app.use('/api/certificates', certificateRoutes);
 app.use('/api/notes', notesRoute);
 app.use('/api/gallery', galleryRoutes);
 app.use('/api/ngos', ngoRoutes);
+app.get('/api/health', async (req, res) => {
+    try {
+        res.status(200).json({
+            status: 'OK',
+            uptime: process.uptime(),
+            timestamp: new Date(),
+            db: 'Connected',
+        });
+    } catch (error) {
+        res.status(500).json({
+            status: 'FAIL',
+            error: error.message,
+        });
+    }
+});
+
 
 // Error Handling
 app.use(errorHandler);
