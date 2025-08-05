@@ -98,7 +98,7 @@ const CertificateManager = () => {
                         <div key={idx}>
                             <label className="block text-sm font-semibold text-cyan-400 mb-2 capitalize">{field.replace(/([A-Z])/g, ' $1')}</label>
                             <input
-                                type={field === 'date' ? 'date' : 'text'}
+                                type={field === 'date' ? 'text' : 'text'}
                                 value={formData[field]}
                                 onChange={(e) => handleChange(field, e.target.value)}
                                 className="w-full px-4 py-2 rounded-md bg-black border border-zinc-600 text-white outline-none focus:border-cyan-500"
