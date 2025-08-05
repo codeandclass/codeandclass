@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const CertificateManager = () => {
     const [certificates, setCertificates] = useState([]);
@@ -93,7 +94,7 @@ const CertificateManager = () => {
                 <div className="bg-zinc-900 p-6 rounded-xl border border-zinc-700 max-w-2xl mx-auto shadow-lg space-y-6 mb-10">
                     <h2 className="text-xl font-bold text-cyan-300">Edit Certificate</h2>
 
-                    {['certificate_no', 'name', 'course', 'date'].map((field, idx) => (
+                    {['certificate_no', 'name', 'father_name', 'course', 'date', 'dob', 'duration'].map((field, idx) => (
                         <div key={idx}>
                             <label className="block text-sm font-semibold text-cyan-400 mb-2 capitalize">{field.replace(/([A-Z])/g, ' $1')}</label>
                             <input
@@ -144,8 +145,11 @@ const CertificateManager = () => {
                     >
                         <h3 className="text-lg font-bold text-cyan-300">{cert.name}</h3>
                         <p className="text-zinc-400 text-sm"><strong>Certificate No:</strong> {cert?.certificate_no}</p>
+                        <p className="text-zinc-400 text-sm"><strong>Father Name: </strong> {cert?.father_name}</p>
+                        <p className="text-zinc-400 text-sm"><strong>Date of Birth: </strong> {cert?.dob}</p>
                         <p className="text-zinc-300"><strong>Course:</strong> {cert?.course}</p>
-                        <p className="text-zinc-300"><strong>Date:</strong> {cert?.date}</p>
+                        <p className="text-zinc-300"><strong>Duration:</strong> {cert?.duration}</p>
+                        <p className="text-zinc-300"><strong>Date: </strong> {cert?.date}</p>
                         <p className="text-zinc-300">
                             <strong>Status:</strong>{' '}
                             <span
@@ -172,6 +176,14 @@ const CertificateManager = () => {
                             >
                                 Delete
                             </button>
+                            <Link to={`/dashboard/certificate/${certificates[index]?.certificate_no}`}>
+                                <button
+                                    onClick={() => handleEditClick(index)}
+                                    className="bg-green-500 hover:bg-green-400 text-black px-4 py-1 rounded-md font-semibold"
+                                >
+                                    Download Certificate
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 ))}

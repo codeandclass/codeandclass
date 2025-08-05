@@ -33,6 +33,7 @@ import Gallery from './Pages/Gallery';
 import AddEditGallery from './Pages/admin/AddEditGallery';
 import PartnerNGO from './Pages/PartnerNGO';
 import NgoDetails from './Pages/admin/NgoDetails';
+import Certificate from './Pages/Certificate';
 
 const App = () => {
   return (
@@ -67,6 +68,8 @@ const App = () => {
           <Route path="/login" element={<Login />} />
 
           <Route path="/logout" element={<Logout />} />
+
+          <Route path="/certificate" element={<Certificate />} />
 
           <Route
             path="/dashboard"
@@ -199,6 +202,15 @@ const App = () => {
             element={
               <PrivateRoute>
                 <NgoDetails />
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/dashboard/certificate/:id"
+            element={
+              <PrivateRoute>
+                <Certificate />
               </PrivateRoute>
             }
           />

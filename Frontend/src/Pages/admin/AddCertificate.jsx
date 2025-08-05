@@ -3,12 +3,15 @@ import React, { useState } from 'react';
 const AddCertificate = () => {
     const [certificateNo, setCertificateNo] = useState('');
     const [name, setName] = useState('');
+    const [fatherName, setFatherName] = useState('')
+    const [dob, setDob] = useState('')
     const [course, setCourse] = useState('');
+    const [duration, setDuration] = useState('')
     const [date, setDate] = useState('');
     const [status, setStatus] = useState('Verified');
 
     const handleSubmit = async () => {
-        if (!certificateNo || !name || !course || !date || !status) {
+        if (!certificateNo || !name || !fatherName || !dob || !course || !duration || !date || !status) {
             alert('Please fill in all fields.');
             return;
         }
@@ -16,7 +19,10 @@ const AddCertificate = () => {
         const certificateData = {
             certificate_no: certificateNo.toUpperCase(),
             name: name.toUpperCase(),
+            father_name: fatherName.toUpperCase(),
             course: course.toUpperCase(),
+            dob,
+            duration,
             date,
             status,
         };
@@ -40,7 +46,10 @@ const AddCertificate = () => {
             // Reset fields
             setCertificateNo('');
             setName('');
+            setFatherName('')
             setCourse('');
+            setDob('')
+            setDuration('')
             setDate('');
             setStatus('Verified');
         } catch (error) {
@@ -80,6 +89,17 @@ const AddCertificate = () => {
                     />
                 </div>
 
+                <div>
+                    <label className="block text-sm font-semibold text-cyan-400 mb-2">Father Name</label>
+                    <input
+                        type="text"
+                        value={fatherName}
+                        onChange={(e) => setFatherName(e.target.value)}
+                        placeholder="e.g., Mohammed Omer"
+                        className="w-full px-4 py-2 rounded-md bg-black border border-zinc-600 text-white outline-none focus:border-cyan-500"
+                    />
+                </div>
+
                 {/* Course */}
                 <div>
                     <label className="block text-sm font-semibold text-cyan-400 mb-2">Course</label>
@@ -92,13 +112,34 @@ const AddCertificate = () => {
                     />
                 </div>
 
+                <div>
+                    <label className="block text-sm font-semibold text-cyan-400 mb-2">Duration</label>
+                    <input
+                        type="text"
+                        value={duration}
+                        onChange={(e) => setDuration(e.target.value)}
+                        placeholder="e.g., Six Months"
+                        className="w-full px-4 py-2 rounded-md bg-black border border-zinc-600 text-white outline-none focus:border-cyan-500"
+                    />
+                </div>
+
                 {/* Date */}
                 <div>
                     <label className="block text-sm font-semibold text-cyan-400 mb-2">Date</label>
                     <input
-                        type="date"
+                        type="text"
                         value={date}
                         onChange={(e) => setDate(e.target.value)}
+                        className="w-full px-4 py-2 rounded-md bg-black border border-zinc-600 text-white outline-none focus:border-cyan-500"
+                    />
+                </div>
+
+                <div>
+                    <label className="block text-sm font-semibold text-cyan-400 mb-2">Date of Birth</label>
+                    <input
+                        type="text"
+                        value={dob}
+                        onChange={(e) => setDob(e.target.value)}
                         className="w-full px-4 py-2 rounded-md bg-black border border-zinc-600 text-white outline-none focus:border-cyan-500"
                     />
                 </div>
